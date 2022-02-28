@@ -21,9 +21,6 @@ const Home = () => {
   const createTuit = () =>
       service.createTuit('my', {tuit})
           .then(findTuits)
-  const deleteTuit = (tid) =>
-      service.deleteTuit(tid)
-          .then(findTuits)
   return(
     <div className="ttr-home">
       <div className="border border-bottom-0">
@@ -60,8 +57,7 @@ const Home = () => {
         </div>
       </div>
       <Tuits tuits={tuits}
-             refreshTuits={findTuits}
-             deleteTuit={deleteTuit}/>
+             refreshTuits={findTuits}/>
     </div>
   );
 };
