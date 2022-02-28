@@ -10,9 +10,11 @@ const MyTuits = () => {
     useEffect(findMyTuits, []);
     const deleteTuit = (tid) =>
         service.deleteTuit(tid)
-            .then(() => findMyTuits());
+            .then(findMyTuits);
     return(
-        <Tuits tuits={tuits} deleteTuit={deleteTuit}/>
+        <Tuits tuits={tuits}
+               refreshTuits={findMyTuits}
+               deleteTuit={deleteTuit}/>
     );
 };
 

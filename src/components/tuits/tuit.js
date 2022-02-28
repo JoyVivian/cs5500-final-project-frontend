@@ -3,7 +3,7 @@ import TuitStats from "./tuit-stats";
 import TuitImage from "./tuit-image";
 import TuitVideo from "./tuit-video";
 
-const Tuit = ({tuit, deleteTuit}) => {
+const Tuit = ({tuit, deleteTuit, likeTuit}) => {
     const daysOld = (tuit) => {
         const now = new Date();
         const nowMillis = now.getTime();
@@ -51,7 +51,7 @@ const Tuit = ({tuit, deleteTuit}) => {
           tuit.image &&
           <TuitImage tuit={tuit}/>
         }
-        <TuitStats tuit={tuit}/>
+        <TuitStats tuit={tuit} likeTuit={likeTuit}/>
       </div>
     </li>
   );

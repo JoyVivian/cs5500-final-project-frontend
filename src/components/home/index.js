@@ -59,7 +59,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Tuits tuits={tuits} deleteTuit={deleteTuit}/>
+      <Tuits tuits={tuits}
+             refreshTuits={findTuits}
+             deleteTuit={deleteTuit}/>
     </div>
   );
 };
