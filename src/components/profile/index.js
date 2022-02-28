@@ -4,7 +4,7 @@ import {HashRouter, Link, Route, Routes, useNavigate, useLocation} from "react-r
 import * as service from "../../services/security-service"
 import TuitsAndReplies from "./tuits-and-replies";
 import Media from "./media";
-import Likes from "./likes";
+import MyLikes from "./my-likes";
 const Profile = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -94,7 +94,7 @@ const Profile = () => {
           <Route path="/mytuits" element={<MyTuits/>}/>
           <Route path="/tuits-and-replies" element={<TuitsAndReplies/>}/>
           <Route path="/media" element={<Media/>}/>
-          <Route path="/likes" element={<Likes/>}/>
+          <Route path="/likes" element={<MyLikes/>}/>
         </Routes>
     </div>
   );
