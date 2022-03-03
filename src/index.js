@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import TodoApp from "./todos/todos";
+import TodoApp from "./todos/TodoApp";
 
 ReactDOM.render(
   <React.StrictMode>

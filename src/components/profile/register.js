@@ -24,7 +24,8 @@ const Register = () => {
                    onChange={(e) =>
                        setNewUser({...newUser, email: e.target.value})}
                    placeholder="email" type="email"/>
-            <button onClick={register} className="btn btn-primary mb-5">Register
+            <button onClick={register}
+                    className="btn btn-primary mb-5">Register
             </button>
         </div>
     );

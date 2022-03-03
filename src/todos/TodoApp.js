@@ -1,5 +1,6 @@
 import TodoItem from "./TodoItem";
-import {useState} from "react"
+import {useState, useEffect} from "react";
+import * as service from "./TodoService";
 
 const TODOS = [
   {title: "Read Dune", done: true, _id: "123"},
@@ -8,38 +9,49 @@ const TODOS = [
 ];
 
 const TodoApp = () => {
-  const [todos, setTodos] = useState(TODOS);
+  const [todos, setTodos] = useState([]);
   const [newTodoTitle, setNewTodoTitle] = useState("New Todo");
 
-  const addTodo = () => {
+  useEffect(async () => {
+    const todos = await service.findAllTodos();
+    setTodos(todos);
+  }, []);
+
+  const addTodo = async () => {
     // alert('add todo')
     const newTodo = {
       title: newTodoTitle
     };
-    const newTodos = [...todos, newTodo];
+    const newTodos = await service.createTodo(newTodo);
+      // [...todos, newTodo];
     setTodos(newTodos);
   }
 
-  const deleteTodo = (todo) => {
-    const newTodos = todos.filter((t) => {
-      if(t === todo) {
-        return false;
-      } else {
-        return true;
-      }
-    });
+  const deleteTodo = async (todo) => {
+    const newTodos = await service.deleteTodo(todo._id);
+    //   todos.filter((t) => {
+    //   if(t === todo) {
+    //     return false;
+    //   } else {
+    //     return true;
+    //   }
+    // });
     setTodos(newTodos);
   }
 
-  const updateTodo = (updatedTodo) => {
+  const updateTodo = async (updatedTodo) => {
     // alert(updatedTodo.done)
-    const newTodos = todos.map(t => {
-      if(t._id === updatedTodo._id) {
-        return updatedTodo;
-      } else {
-        return t;
-      }
-    });
+    const newTodos = await service.updateTodo(
+      updatedTodo._id,
+      updatedTodo
+    )
+    //   todos.map(t => {
+    //   if(t._id === updatedTodo._id) {
+    //     return updatedTodo;
+    //   } else {
+    //     return t;
+    //   }
+    // });
     setTodos(newTodos);
   }
 

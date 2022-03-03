@@ -21,7 +21,8 @@ export const Login = () => {
                    onChange={(e) =>
                        setLoginUser({...loginUser, password: e.target.value})}
                    placeholder="password" type="password"/>
-            <button onClick={login} className="btn btn-primary mb-5">Login
+            <button onClick={login}
+                    className="btn btn-primary mb-5">Login
             </button>
         </div>
     );
