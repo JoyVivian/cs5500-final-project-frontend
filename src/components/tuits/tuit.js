@@ -2,7 +2,7 @@ import React from "react";
 import TuitStats from "./tuit-stats";
 import TuitImage from "./tuit-image";
 import TuitVideo from "./tuit-video";
-import {useNavigate} from "react-router-dom";
+import {useNavigate, Link} from "react-router-dom";
 
 const Tuit = ({tuit, deleteTuit, likeTuit}) => {
     const navigate = useNavigate();
@@ -29,8 +29,8 @@ const Tuit = ({tuit, deleteTuit, likeTuit}) => {
         return old;
     }
   return(
-    <li onClick={() => navigate(`/tuit/${tuit._id}`)}
-        className="p-2 ttr-tuit list-group-item d-flex rounded-0">
+    // <li onClick={() => navigate(`/tuit/${tuit._id}`)}
+    <li className="p-2 ttr-tuit list-group-item d-flex rounded-0">
       <div className="pe-2">
         {
           tuit.postedBy &&
@@ -40,6 +40,9 @@ const Tuit = ({tuit, deleteTuit, likeTuit}) => {
       </div>
       <div className="w-100">
           <i onClick={() => deleteTuit(tuit._id)} className="fas fa-remove fa-2x fa-pull-right"></i>
+          <Link to={`/tuit/${tuit._id}`}>
+          <i className="float-end fas fa-circle-ellipsis me-1"></i>
+          </Link>
         <h2
           className="fs-5">
           {tuit.postedBy && tuit.postedBy.username}
