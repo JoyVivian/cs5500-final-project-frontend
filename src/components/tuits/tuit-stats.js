@@ -21,12 +21,11 @@ const TuitStats = ({tuit, likeTuit,dislikeTuit}) => {
           <span className="ttr-like-tuit-click"
                 onClick={() => likeTuit(tuit)}>
               {
-                tuit.stats && tuit.stats.likes && tuit.stats.likes > 0 &&
-//                  findAllTuitsLikedByUser("me").includes(tuit._id) &&
-                  <i className="fa-solid fa-thumbs-up me-1" style={{color: 'black'}}></i>
+                tuit.stats  && tuit.stats.likes > 0 &&
+                  <i className="fa-solid fa-thumbs-up me-1" style={{color: 'blue'}}></i>
               }
               {
-                tuit.stats && tuit.stats.likes && tuit.stats.likes <= 0 &&
+                tuit.stats && tuit.stats.likes <= 0 &&
                   <i className="fa-solid fa-thumbs-up me-1"></i>
               }
             <span className="ttr-stats-likes">{tuit.stats && tuit.stats.likes}</span>
@@ -37,12 +36,12 @@ const TuitStats = ({tuit, likeTuit,dislikeTuit}) => {
           <span className="ttr-dislike-tuit-click"
                 onClick={() => dislikeTuit(tuit)}>
               {
-                  tuit.stats && tuit.stats.dislikes && tuit.stats.dislikes > 0 &&
+                  tuit.stats && tuit.stats.dislikes > 0 &&
 //                  findAllTuitsDislikedByUser("me").includes(tuit._id) &&
-                  <i className="fa-solid fa-thumbs-down me-1" style={{color: 'black'}}></i>
+                  <i className="fa-solid fa-thumbs-down me-1" style={{color: 'blue'}}></i>
               }
               {
-                  tuit.stats && tuit.stats.dislikes && tuit.stats.dislikes <= 0 &&
+                  tuit.stats && tuit.stats.dislikes <= 0 &&
                   <i className="fa-solid fa-thumbs-down"></i>
               }
               {tuit.stats && tuit.stats.dislikes}
