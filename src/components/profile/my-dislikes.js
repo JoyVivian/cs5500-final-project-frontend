@@ -11,19 +11,9 @@ const MyDislikes = () => {
 
     return(
         <div>
-            <h2>My Likes</h2>
+            <h2>My Dislikes</h2>
             <Tuits tuits={dislikedTuits} refreshTuits={findTuitsIDislike}/>
         </div>
     );
 };
 export default MyDislikes;
-
-
-// const MyDislikes = () => {
-//     return(
-//         <div>
-//             <h1>My Dislikes</h1>
-//         </div>
-//     )
-// }
-// export default MyDislikes;
