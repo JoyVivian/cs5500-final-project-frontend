@@ -1,7 +1,9 @@
 import React from "react";
+import WhoToFollowList from "./WhoToFollowList";
+
 const Lists = () => {
   return(
-    <h1>Lists Screen</h1>
+    <WhoToFollowList />
   );
 };
 export default Lists;
