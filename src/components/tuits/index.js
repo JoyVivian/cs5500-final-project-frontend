@@ -4,6 +4,7 @@ import Tuit from "./tuit";
 import * as likesService from "../../services/likes-service";
 import * as dislikesService from "../../services/dislikes-service";
 import * as service from "../../services/tuits-service";
+import * as bookmarksService from "../../services/bookmark-service";
 
 const Tuits = ({tuits = [], refreshTuits}) => {
     const likeTuit = (tuit) =>
@@ -13,6 +14,11 @@ const Tuits = ({tuits = [], refreshTuits}) => {
 
     const dislikeTuit = (tuit) =>
         dislikesService.userDislikesTuit("me", tuit._id)
+            .then(refreshTuits)
+            .catch(e => alert(e))
+
+    const bookmarkTuit = (tuit) =>
+        bookmarksService.userBookmarksTuit("me", tuit._id)
             .then(refreshTuits)
             .catch(e => alert(e))
 
@@ -30,6 +36,7 @@ const Tuits = ({tuits = [], refreshTuits}) => {
                         deleteTuit={deleteTuit}
                         likeTuit={likeTuit}
                         dislikeTuit={dislikeTuit}
+                        bookmarkTuit = {bookmarkTuit}
                         tuit={tuit}/>)
             }
           </ul>
