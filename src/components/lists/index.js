@@ -3,7 +3,6 @@ import {HashRouter, Link, Route, Routes, useNavigate, useLocation} from "react-r
 
 import WhoToFollowList from "./WhoToFollowList";
 import * as service from "../../services/security-service";
-import * as followService from "../../services/follow-service";
 
 const Lists = () => {
   const navigate = useNavigate();
