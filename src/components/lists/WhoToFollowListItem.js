@@ -1,5 +1,11 @@
-import React from "react";
-const WhoToFollowListItem = ({who}) =>{
+import React, {useState} from "react";
+const WhoToFollowListItem = ({who, followUser}) =>{
+    const [btnColor, setBtnColor] = useState("blue");
+    const handleClick = () => {
+        followUser("me", who._id);
+        btnColor === "blue" ? setBtnColor("gray") : setBtnColor("blue");
+    }
+
     return(
         <>
            <li className="list-group-item col-color">
@@ -11,12 +17,11 @@ const WhoToFollowListItem = ({who}) =>{
                     <div className="col-6">
                         <span className="right-text">{who.username}</span>
                         <i className="fas fa-circle icon-white"></i><br></br>
-                        {/*<span className="handle-setting">{who.handle}</span>*/}
                     
                     </div>
                     
                     <div className="col-3">
-                        <button className="btn btn-primary rounded-pill follow-color">Follow</button>                   
+                        <button className="btn btn-primary rounded-pill follow-color" style={{backgroundColor: btnColor}} onClick={handleClick}>Follow</button>
                     </div>
                     </div>
                     </li>

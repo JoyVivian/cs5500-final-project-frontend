@@ -1,12 +1,17 @@
 import React, {useEffect, useState} from "react";
 import WhoToFollowListItem from "./WhoToFollowListItem";
 import * as service from "../../services/users-service";
+import * as followService from "../../services/follow-service";
+
 
 const WhoToFollowList = () => {
     const [people, setPeople] = useState([]);
     const findPeople = () =>
         service.findAllUsers()
             .then((people) => setPeople(people));
+    const followUser = (uid1, uid2) =>
+        followService.userFollowsUser(uid1, uid2);
+
     useEffect(findPeople, []);
 
     return (
@@ -17,7 +22,7 @@ const WhoToFollowList = () => {
             {
                 people.map(person => {
                     return(
-                        <WhoToFollowListItem who={person}/>
+                        <WhoToFollowListItem who={person} followUser={followUser}/>
                     );
                 })
             }
