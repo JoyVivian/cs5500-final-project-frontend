@@ -6,6 +6,7 @@ import TuitsAndReplies from "./tuits-and-replies";
 import Media from "./media";
 import MyLikes from "./my-likes";
 import MyDislikes from "./my-dislikes";
+import MyBookmarks from "../bookmarks/my-bookmarks";
 const Profile = () => {
   const navigate = useNavigate();
   const location = useLocation();
