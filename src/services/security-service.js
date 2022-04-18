@@ -24,3 +24,7 @@ export const logout = (user) =>
 export const profile = () =>
     api.post(`${SECURITY_API}/profile`)
         .then(response => response.data);
+
+export const lists = () =>
+    api.post(`${SECURITY_API}/lists`)
+        .then(response => response.data);

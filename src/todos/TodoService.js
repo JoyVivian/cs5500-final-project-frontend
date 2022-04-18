@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const TODO_REST_API = "https://jiangwei-a4.herokuapp.com/todos";
-
+//const TODO_REST_API = "https://cs5500-final-project.herokuapp.com/todos";
+const TODO_REST_API = "http://localhost:4000/todos";
 export const findAllTodos = async () => {
   const response = await axios.get(TODO_REST_API);
   const todos = response.data;

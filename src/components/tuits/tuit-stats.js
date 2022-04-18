@@ -2,7 +2,7 @@ import React from "react";
 import {findAllTuitsLikedByUser} from "../../services/likes-service";
 import {findAllTuitsDislikedByUser} from "../../services/dislikes-service";
 
-const TuitStats = ({tuit, likeTuit,dislikeTuit}) => {
+const TuitStats = ({tuit, likeTuit,dislikeTuit, bookmarkTuit}) => {
     return (
       <div className="row mt-2">
         <div className="col">
@@ -46,6 +46,21 @@ const TuitStats = ({tuit, likeTuit,dislikeTuit}) => {
               }
               {tuit.stats && tuit.stats.dislikes}
           </span>
+          </div>
+
+          <div className="col">
+              <span className="ttr-bookmarks-tuit-click"
+                    onClick={() => bookmarkTuit(tuit)}>
+                  {
+                      tuit.stats && tuit.stats.bookmarks > 0 &&
+                      <i className="fa-solid fa-bookmark me-1" style={{color: 'yellow'}}></i>
+                  }
+                  {
+                      tuit.stats && tuit.stats.bookmarks <= 0 &&
+                      <i className="fa-solid fa-bookmark"></i>
+                  }
+                  {tuit.stats && tuit.stats.bookmarks}
+              </span>
           </div>
 
         <div className="col">
