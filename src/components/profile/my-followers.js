@@ -2,7 +2,7 @@ import FollowList from "./follow-list";
 import * as service from "../../services/follow-service";
 import {useEffect, useState} from "react";
 
-const MyFollowing = () => {
+const MyFollowers = () => {
     const [people, setPeople] = useState([]);
     const findFollowers = () => {
         service.findFollowers("me")
@@ -18,4 +18,4 @@ const MyFollowing = () => {
         </div>
     );
 };
-export default MyFollowing;
+export default MyFollowers;
