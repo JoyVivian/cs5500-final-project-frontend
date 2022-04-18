@@ -8,6 +8,7 @@ import MyLikes from "./my-likes";
 import MyDislikes from "./my-dislikes";
 import MyBookmarks from "../bookmarks/my-bookmarks";
 import MyFollowing from "./my-following";
+import MyFollowers from "./my-followers";
 
 const Profile = () => {
   const navigate = useNavigate();
