@@ -7,6 +7,8 @@ import Media from "./media";
 import MyLikes from "./my-likes";
 import MyDislikes from "./my-dislikes";
 import MyBookmarks from "../bookmarks/my-bookmarks";
+import MyFollowing from "./my-following";
+
 const Profile = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -94,6 +96,16 @@ const Profile = () => {
                     className={`nav-link ${location.pathname.indexOf('mydislikes') >= 0 ? 'active':''}`}>
                 Dislikes</Link>
             </li>
+            <li className="nav-item">
+              <Link to="/profile/followers"
+                    className={`nav-link ${location.pathname.indexOf('followers') >= 0 ? 'active':''}`}>
+                Followers</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/profile/following"
+                    className={`nav-link ${location.pathname.indexOf('following') >= 0 ? 'active':''}`}>
+                Following</Link>
+            </li>
           </ul>
         </div>
       </div>
@@ -103,6 +115,8 @@ const Profile = () => {
           <Route path="/media" element={<Media/>}/>
           <Route path="/likes" element={<MyLikes/>}/>
           <Route path="/dislikes" element={<MyDislikes/>}/>
+          <Route path="/followers" element={<MyFollowers/>}/>
+          <Route path="/following" element={<MyFollowing/>} />
         </Routes>
     </div>
   );
