@@ -25,6 +25,12 @@ export const profile = () =>
     api.post(`${SECURITY_API}/profile`)
         .then(response => response.data);
 
+// export const bookmark = () =>
+//     api.post(`${SECURITY_API}/bookmark`)
+//         .then(response => response.data);
+
+
 export const lists = () =>
     api.post(`${SECURITY_API}/lists`)
         .then(response => response.data);
+

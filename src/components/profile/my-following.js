@@ -4,14 +4,17 @@ import {useEffect, useState} from "react";
 
 const MyFollowing = () => {
     const [people, setPeople] = useState([]);
-    const findAllFollowers = () =>
-        service.findFollowers("me")
+    const findFollowing = () => {
+        service.findFollowing("me")
             .then((people) => setPeople(people));
-    useEffect(findAllFollowers, []);
+    }
+
+    useEffect(findFollowing, []);
+
     return(
         <div>
             <h2>My Following</h2>
-            <FollowList ppl={people} status={findAllFollowers}/>
+            <FollowList ppl={people} status={"My Following"}/>
         </div>
     );
 };

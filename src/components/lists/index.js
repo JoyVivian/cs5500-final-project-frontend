@@ -7,7 +7,6 @@ import * as service from "../../services/security-service";
 const Lists = () => {
   const navigate = useNavigate();
   const [lists, setLists] = useState({});
-
   useEffect(async () => {
     try {
       const users = await service.profile();

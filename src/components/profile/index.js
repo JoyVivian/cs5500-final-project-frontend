@@ -6,9 +6,8 @@ import TuitsAndReplies from "./tuits-and-replies";
 import Media from "./media";
 import MyLikes from "./my-likes";
 import MyDislikes from "./my-dislikes";
-import MyFollowers from "./followering";
-import Followers from "./followers";
-
+import MyBookmarks from "../bookmarks/my-bookmarks";
+import MyFollowing from "./my-following";
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -110,15 +109,14 @@ const Profile = () => {
           </ul>
         </div>
       </div>
-
         <Routes>
           <Route path="/mytuits" element={<MyTuits/>}/>
           <Route path="/tuits-and-replies" element={<TuitsAndReplies/>}/>
           <Route path="/media" element={<Media/>}/>
           <Route path="/likes" element={<MyLikes/>}/>
           <Route path="/dislikes" element={<MyDislikes/>}/>
-          <Route path="/followers" element={<Followers/>}/>
-          <Route path="/following" element={<MyFollowers/>} />
+          <Route path="/followers" element={<MyFollowers/>}/>
+          <Route path="/following" element={<MyFollowing/>} />
         </Routes>
     </div>
   );
