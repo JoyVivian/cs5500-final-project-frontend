@@ -13,7 +13,7 @@ const MyFollowing = () => {
 
     return(
         <div>
-            <h2>My Following</h2>
+            <h2>My Followers</h2>
             <FollowList ppl={people} status={"My Following"}/>
         </div>
     );
