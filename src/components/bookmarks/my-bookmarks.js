@@ -1,6 +1,6 @@
-import {useEffect, useState} from "react";
-import * as service from "../../services/bookmark-service";
 import Tuits from "../tuits";
+import * as service from "../../services/bookmark-service";
+import {useEffect, useState} from "react";
 
 const MyBookmarks = () => {
     const [bookmarkedTuits, setBookmarkedTuis] = useState([]);
@@ -11,10 +11,8 @@ const MyBookmarks = () => {
 
     return(
         <div>
-            <h2>My Bookmarks</h2>
-            <Tuits tuits = {bookmarkedTuits} refreshTuits={findTuitsIBookmark}/>
+            <Tuits tuits={bookmarkedTuits} refreshTuits={findTuitsIBookmark}/>
         </div>
-    )
-}
-
+    );
+};
 export default MyBookmarks;
