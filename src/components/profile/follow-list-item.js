@@ -10,7 +10,8 @@ const FollowListItem = ({who}) =>{
                     </div>
 
                     <div className="col-6">
-                        <span className="right-text">{who.username}</span>
+                        <span className="right-text">{who.user.username}</span>
+                        <span className="right-text">{who.followedBy.username}</span>
                         <i className="fas fa-circle icon-white"></i><br></br>
 
                     </div>

@@ -100,12 +100,12 @@ const Profile = () => {
             <li className="nav-item">
               <Link to="/profile/followers"
                     className={`nav-link ${location.pathname.indexOf('followers') >= 0 ? 'active':''}`}>
-                Followers</Link>
+                Following</Link>
             </li>
             <li className="nav-item">
               <Link to="/profile/following"
                     className={`nav-link ${location.pathname.indexOf('following') >= 0 ? 'active':''}`}>
-                Following</Link>
+                Followers</Link>
             </li>
           </ul>
         </div>
