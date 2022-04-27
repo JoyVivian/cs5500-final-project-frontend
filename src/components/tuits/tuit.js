@@ -30,7 +30,7 @@ const Tuit = ({tuit, deleteTuit, likeTuit, dislikeTuit, bookmarkTuit}) => {
     }
     return(
         // <li onClick={() => navigate(`/tuit/${tuit._id}`)}
-        <li className="p-2 ttr-tuit list-group-item d-flex rounded-0">
+        <li className="p-2 ttr-tuit ttr-tuit list-group-item d-flex rounded-0">
             <div className="pe-2">
                 {
                     tuit.postedBy &&
