@@ -5,13 +5,14 @@ import {HashRouter} from "react-router-dom";
 test('', () => {
     render(
         <HashRouter>
-            <FollowListItem who={{
-                _id: '123',
-                username: 'test',
-                password: 'bob123',
-                email: 'bob@123.com',
-                salary: "50000"
-            }} followUser={() => {}}/>
+            <FollowListItem who={{"_id":"6268b960fb8ec1fbdcb61d95",
+                "user":"624e594ca02ce05bf8411f8f",
+                "followedBy":{"_id":"62587b3e386b470070d34a5d",
+                    "username":"123",
+                    "password":"$2b$10$5qvrhHCr0urQzItghumIRud1750E0vRnRjFTovNE61zAxu4tKB67a",
+                    "email":"123@GMAIL.COM",
+                    "salary":50000,"__v":0},
+                "__v":0}} followUser={() => {}}/>
         </HashRouter>
     );
 });

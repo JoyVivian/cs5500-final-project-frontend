@@ -1,30 +1,18 @@
 [
-  {
-    "_id": "123",
-    "username": "test",
-    "password": "bob123",
-    "email": "bob@123.com",
-    "salary": "50000"
-  },
-  {
-    "_id": "2",
-    "username": "test2",
-    "password": "bob123",
-    "email": "bob@123.com",
-    "salary": "50000"
-  },
-  {
-    "_id": "3",
-    "username": "test3",
-    "password": "bob1234",
-    "email": "bob3@123.com",
-    "salary": "500000"
-  },
-  {
-    "_id": "4",
-    "username": "test4",
-    "password": "bob12345",
-    "email": "bob4@123.com",
-    "salary": "60000"
-  }
+  {"_id":"625f3886e00a0eb289dcc760",
+    "user":"6783456",
+    "followedBy":
+    {"_id":"625b12e72f818e63361a5096",
+      "username":"456",
+      "password":"$2b$10$imRdxAughPQHu9ld.b6tHet2lDpWSR1krj03EPeH606AbZStaJfKG",
+      "email":"456@gmail.com","salary":50000,"__v":0},
+    "__v":0},
+  {"_id":"6268b960fb8ec1fbdcb61d95",
+    "user":"12334",
+    "followedBy":
+    {"_id":"62587b3e386b470070d34a5d",
+      "username":"123",
+      "password":"$2b$10$5qvrhHCr0urQzItghumIRud1750E0vRnRjFTovNE61zAxu4tKB67a",
+      "email":"123@GMAIL.COM","salary":50000,"__v":0},
+    "__v":0}
 ]

@@ -6,8 +6,8 @@ const FollowList = ({ppl}) => {
         <div>
             <ul className="list-group">
                 {
-                    ppl.map && ppl.map(person =>
-                        <FollowListItem className="the-person" who={person}/>
+                    ppl.map && ppl.map((person, idx) =>
+                        <FollowListItem key={idx} className="the-person" who={person}/>
                     )
                 }
             </ul>
