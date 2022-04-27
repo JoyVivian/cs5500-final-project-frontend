@@ -1,5 +1,5 @@
-import FollowList from "./follow-list";
-import peopleData from "./people-data.json";
+import FollowList from "../components/profile/follow-list";
+import peopleData from "../components/profile/people-data.json";
 import {act, create} from "react-test-renderer";
 import {HashRouter} from "react-router-dom";
 
@@ -14,5 +14,5 @@ test('Follow list render', () => {
     })
     const root = people.root;
     const personItems = root.findAllByProps({className: 'the-person'})
-    //expect(personItems.length).toBe(peopleData.length)
+    expect(personItems.length).toBe(peopleData.length)
 })
