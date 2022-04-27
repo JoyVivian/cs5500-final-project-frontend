@@ -1,10 +1,10 @@
 import Tuits from "./index";
-import tuitsData from "./tuits-data.json"
+import tuitsData from "./tuits-data.json";
 import {act, create} from "react-test-renderer";
 import {HashRouter} from "react-router-dom";
 
 test('tuits render', () => {
-  let tuits
+  let tuits;
   act(() => {
     tuits = create(
       <HashRouter>
