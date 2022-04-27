@@ -3,15 +3,15 @@ import FollowListItem from "./follow-list-item";
 
 const FollowList = (ppl) => {
     return (
-        <ul className="list-group">
-            {
-                ppl.map && ppl.map(person => {
-                    return(
-                        <FollowListItem who={person}/>
-                    );
-                })
-            }
-        </ul>
+        <div>
+            <ul className="list-group">
+                {
+                    ppl.map && ppl.map(person =>
+                        <FollowListItem className="the-person" who={person}/>
+                    )
+                }
+            </ul>
+        </div>
     );
 }
 
