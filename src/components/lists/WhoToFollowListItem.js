@@ -14,8 +14,6 @@ const WhoToFollowListItem = ({who, followUser}) =>{
                     </div>
                     <div className="col-6">
                         <span className="right-text">{who.username}</span>
-                        <i className="fas fa-circle icon-white"></i><br></br>
-                    
                     </div>
                     
                     <div className="col-3">
