@@ -14,7 +14,7 @@ const MyFollowers = () => {
     return(
         <div>
             <h2>My Following</h2>
-            <FollowList ppl={people} status={"My Followers"}/>
+            <FollowList className="follow-list" ppl={people} status={"My Followers"}/>
         </div>
     );
 };
