@@ -51,6 +51,7 @@ jest.mock('../components/profile/follow-list', () => () =>  <div id="myFollowLis
 describe("my followers list render", () => {
     test("Follow List component can be rendered correctly.", async () => {
         const {container} = render(<MyFollowers />);
+        // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
         const followList = container.querySelector('div#myFollowList');
 
         expect(followList).toBeInTheDocument();

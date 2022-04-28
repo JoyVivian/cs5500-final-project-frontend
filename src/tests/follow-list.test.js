@@ -13,6 +13,7 @@ test('Follow list render', () => {
         )
     })
     const root = people.root;
+    // eslint-disable-next-line testing-library/await-async-query
     const personItems = root.findAllByProps({className: 'the-person'})
     expect(personItems.length).toBe(peopleData.length)
 })

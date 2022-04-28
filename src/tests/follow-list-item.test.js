@@ -2,7 +2,7 @@ import FollowListItem from "../components/profile/follow-list-item";
 import {render} from "@testing-library/react";
 import {HashRouter} from "react-router-dom";
 
-test('', () => {
+test('follow list item render', () => {
     render(
         <HashRouter>
             <FollowListItem who={{"_id":"6268b960fb8ec1fbdcb61d95",
