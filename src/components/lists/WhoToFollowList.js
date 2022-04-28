@@ -20,9 +20,9 @@ const WhoToFollowList = () => {
                 <span className="handle-setting">Who to follow</span>
             </li>
             {
-                people.map(person => {
+                people.map((person, idx) => {
                     return(
-                        <WhoToFollowListItem who={person} followUser={followUser}/>
+                        <WhoToFollowListItem className="the-person-item" key= {idx} who={person} followUser={followUser}/>
                     );
                 })
             }
